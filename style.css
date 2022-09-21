@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+
+:root {
+  --whiteBackground: #ffffff;
+  --communColor: #0000;
+  --priceColor: hsl(176, 50%, 47%);
+  --buttonsColor: hsl(176, 72%, 28%);
+  --Font: "Commissioner", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--Font);
+}
+
+body {
+  background-color: hsla(0, 0%, 48%, 0.081);
+  font-size: 16px;
+}
+
+.header {
+  background-image: url("./images/image-hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem;
+  height: 40vh;
+  width: 100%;
+}
+
+.navbar > a {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.5rem;
+  position: relative;
+  right: 1.3rem;
+}
+
+ul.items-container {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: var(--whiteBackground);
+  padding: 1rem;
+  margin: 1.5rem 0.625rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 300px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 300px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 300px 0px rgba(0, 0, 0, 0.75);
+  z-index: 9;
+}
+
+.items-container a:not(:first-child) {
+  border-top: 1px solid rgba(0, 0, 0, 0.325);
+  width: 100%;
+}
+
+a {
+  padding: 1.5rem;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hideMenu {
+  display: none !important;
+}
+
+#menu-button {
+  float: right;
+  position: relative;
+  right: 0.625rem;
+  top: 0.6rem;
+  cursor: pointer;
+}
+
+.cards-container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: repeat(3, 5%);
+}
+
+.first-card,
+.second-card,
+.third-card {
+  background-color: var(--whiteBackground);
+  margin: 0 1rem;
+  border-radius: 10px;
+  padding: 0.425rem 1rem;
+}
+
+.cards-container .first-card {
+  text-align: center;
+  position: relative;
+  top: -3.5rem;
+}
+
+.underMenu {
+  z-index: -1;
+}
+
+.first-card > img {
+  position: relative;
+  top: -2.4rem;
+}
+
+.first-card__description {
+  margin-top: 1.2rem;
+}
+
+.first-card__buttons-container {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.first-card__buttons-container > button {
+  height: 7vh;
+  width: 60vw;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  background-color: var(--priceColor);
+  color: #ffff;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.second-card {
+  text-align: center;
+  width: 90vw;
+}
+
+.second-card div:not(:last-child) {
+  margin: 2.5rem;
+}
+
+.second-card .underline {
+  border-top: 1px solid rgba(0, 0, 0, 0.166);
+  position: relative;
+  top: -1rem;
+  margin: 0 6.5rem !important;
+}
+
+.second-card__price,
+.second-card__total,
+.second-card__time {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.price_description,
+.total_description,
+.time_description {
+  opacity: .5;
+  margin-top: 0.625rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.progress-bar {
+  margin: 1.5rem 0.8rem;
+  background-color: rgba(0, 0, 0, 0.106);
+  height: 13px;
+  border-radius: 50px;
+}
+
+.progress {
+  height: 13px;
+  width: 80%;
+  border-radius: 50px;
+  background-color: var(--priceColor);
+}

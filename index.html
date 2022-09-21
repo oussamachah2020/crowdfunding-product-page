@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Crowdfunding product page</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="header">
+        <nav class="navbar">
+          <a href="/"><img src="./images/logo.svg" alt="main_logo" /></a>
+          <img
+            src="./images/icon-hamburger.svg"
+            alt="menu-button"
+            id="menu-button"
+          />
+          <ul class="items-container hideMenu">
+            <a href="">About</a>
+            <a href="">Discover</a>
+            <a href="">Get Started</a>
+          </ul>
+        </nav>
+      </div>
+      <div class="cards-container">
+        <!-- First Card -->
+        <div class="first-card">
+          <img src="./images/logo-mastercraft.svg" alt="M_logo" id="logo" />
+          <h2 class="first-card__title">Mastercraft Bamboo Monitor Riser</h2>
+          <p class="first-card__description">
+            A beautiful & handcrafted monitor stand to reduce neck and eye
+            strain.
+          </p>
+          <div class="first-card__buttons-container">
+            <button class="buttons-container_backBtn">Back this project</button>
+            <img
+              class="buttons-container__bookmark"
+              src="./images/icon-bookmark.svg"
+              alt="bookmark"
+            />
+          </div>
+        </div>
+
+        <!-- Second Card -->
+        <div class="second-card">
+          <div class="price-container">
+            <p class="second-card__price">$89,914</p>
+            <p class="price_description">of $100,000 backed</p>
+          </div>
+          <div class="underline"></div>
+          <div class="total_container">
+            <p class="second-card__total">5,007</p>
+            <p class="total_description">total backers</p>
+          </div>
+          <div class="underline"></div>
+          <div class="time-cotainer">
+            <p class="second-card__time">56</p>
+            <p class="time_description">days left</p>
+          </div>
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+
+        <!-- Third Card -->
+        <div class="third-card"></div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
