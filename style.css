@@ -27,6 +27,7 @@ body {
   padding: 1rem;
   height: 40vh;
   width: 100%;
+  /* display: none; */
 }
 
 .navbar > a {
@@ -80,7 +81,17 @@ a {
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-template-rows: repeat(3, 5%);
+  grid-template-columns: repeat(1, 100%);
+  gap: 2.5rem;
+  /* display: none; */
+}
+
+.mini-cards__container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
 }
 
 .first-card,
@@ -94,8 +105,8 @@ a {
 
 .cards-container .first-card {
   text-align: center;
-  position: relative;
-  top: -3.5rem;
+  /* position: relative;
+  top: -rem; */
 }
 
 .underMenu {
@@ -130,6 +141,7 @@ a {
   color: #ffff;
   font-weight: 800;
   font-size: 1rem;
+  cursor: pointer;
 }
 
 .second-card {
@@ -153,12 +165,13 @@ a {
 .second-card__time {
   font-weight: 800;
   font-size: 2rem;
+  border: none;
 }
 
 .price_description,
 .total_description,
 .time_description {
-  opacity: .5;
+  opacity: 0.5;
   margin-top: 0.625rem;
   font-size: 0.8rem;
   font-weight: 500;
@@ -176,4 +189,215 @@ a {
   width: 80%;
   border-radius: 50px;
   background-color: var(--priceColor);
+}
+
+.third-card {
+  padding: 2.5rem;
+}
+
+.third-card .third-card__informations1,
+.third-card__informations2,
+.description {
+  margin: 1.5rem 0;
+  opacity: 0.4;
+}
+
+.mini-cards__container {
+  margin-top: 3.5rem;
+}
+
+.bamboo-card,
+.blackEdition-card,
+.mahogany-card {
+  border: 1px solid rgba(128, 128, 128, 0.252);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.mini-cards__container .description {
+  line-height: 1.5rem;
+}
+
+.price {
+  color: var(--priceColor);
+  margin-top: 0.5rem;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: rgba(0, 0, 0, 0.34);
+}
+
+.number {
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+}
+
+.reward-selection {
+  margin-top: 1.5rem;
+  padding: 18px 42px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background-color: var(--priceColor);
+  color: #ffff;
+  font-weight: 700;
+}
+
+.soldOut {
+  opacity: 0.5;
+}
+
+.outOfStock {
+  background-color: grey;
+}
+
+.BackProject {
+  margin: 2rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: var(--whiteBackground);
+  box-shadow: 0px 0px 140px 23px rgba(0, 0, 0, 0.75);
+}
+
+.BackProject > h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.BackProject > h2 img {
+  cursor: pointer;
+}
+
+label.unSelected {
+  border: 1px solid rgba(0, 0, 0, 0.315);
+  border-radius: 50%;
+  /* padding: 10px 15px; */
+  height: 30px;
+  width: 30px;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.selected {
+  background-image: url("./images/selected.png");
+  background-position: center;
+  background-size: contain;
+}
+
+.border-select {
+  border: 2px solid hsl(176, 50%, 47%);
+}
+
+.BackProject .top-card {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.BackProject .operation {
+  border-top: 1px solid rgba(0, 0, 0, 0.184);
+  margin-top: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+.BackProject .operation > p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+#symbole {
+  opacity: 0.5;
+  margin-right: 0.625rem;
+}
+
+.BackProject .operation .details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.selected-price-container {
+  border: 1px solid rgba(0, 0, 0, 0.359);
+  padding: 15px 35px;
+  border-radius: 50px;
+}
+
+.continue,
+.success-card button {
+  padding: 15px 35px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background-color: var(--priceColor);
+  color: var(--whiteBackground);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.hideOperation {
+  display: none !important;
+}
+
+.success-card {
+  margin: 2rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: var(--whiteBackground);
+  box-shadow: 0px 0px 140px 23px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* display: none; */
+}
+
+.success-card img {
+  margin-bottom: 1rem;
+}
+
+.success-card p {
+  text-align: center;
+  margin: 1.5rem 0;
+  opacity: 0.5;
+}
+
+@media only screen and (max-width: 1440px) {
+  .cards-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(1, 100%);
+    margin: 0 20rem;
+  }
+  .header {
+    background-image: url("./images/image-hero-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .statics-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .BackProject, .success-card {
+    margin: 2rem 20rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .header {
+    background-image: url("./images/image-hero-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
